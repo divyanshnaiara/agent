@@ -1,0 +1,17 @@
+fastapi~=0.115.6
+agno~=1.0.6
+openai
+pgvector
+pypdf
+psycopg[binary]
+sqlalchemy
+uvicorn
+websockets
+pydantic~=2.10.4
+pydantic-settings~=2.7.0
+pydantic_core~=2.27.2
+starlette~=0.41.3
+python-dotenv~=1.0.1
+
+httpx~=0.28.1
+requests~=2.32.3

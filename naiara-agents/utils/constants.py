@@ -1,0 +1,8 @@
+INTEGRATION_SERVICE_URL = "https://integration-dev.aiafriends.itinkerserver.com/"
+# INTEGRATION_SERVICE_URL = "http://192.168.1.19:8081/"
+SECRETARY_AGENT = "secretary_agent"
+TRAVEL_AGENT = "travel_agent"
+METHOD_GET = "get"
+METHOD_POST = "post"
+METHOD_PUT = "put"
+SHOPPER_AGENT = "shopper_agent"

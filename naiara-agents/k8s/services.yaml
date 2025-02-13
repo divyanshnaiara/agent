@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: naiara-agents-service-dev-svc
+  namespace: dev
+spec:
+  selector:
+    app: naiara-agents-service-dev
+  ports:
+    - protocol: TCP
+      targetPort: 8000
+      port: 8000
+  type: NodePort

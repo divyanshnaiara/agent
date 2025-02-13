@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: naiara-agents-service-demo
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: naiara-agents-service-demo
+  template:
+    metadata:
+      labels:
+        app: naiara-agents-service-demo
+    spec:
+      containers:
+        - image: 135808953483.dkr.ecr.eu-west-3.amazonaws.com/demo/naiara-agents:latest
+          name: naiara-agents-service
+          env:
+            - name: OPENAI_API_KEY
+              value: "sk-svcacct-28LP1E_StYwWo8Eg1mLSP-io4TQgsFPHB8mtey4AwKKmyBlBF1bXRw3ZhoGIIn7p5Z4B84T3BlbkFJecNAASkH_n86V0s9A36_LeHqW-BuZmbBN46DcD10ZsGIHv-d5r7C84f28IVKNi_djRgI4A"
+            - name: USER_SERVICE_URL
+              value: "https://user-demo.aiafriends.itinkerserver.com/"
+            - name: DB_URL
+              value: "postgresql+psycopg://postgres:nUu-*qv!ZS$K5u7_aJ_~2GFqM(41@naiara-agents-dev.c9ooq0oiesxz.eu-west-3.rds.amazonaws.com:5432/ai"
